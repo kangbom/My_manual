@@ -1,6 +1,20 @@
-git init
-git add .
-git commit -m "メッセージ"
+--新しいenvironmentsからgit initする場合
+  git config --global user.name "kangbom"
+  git config --global user.email "kimkangbom@gmail.com"
+  git config -l　で設定値を確認できる
+  
+  git init
+  git add .
+  git commit -m "メッセージ"
+  
+--新しいenvironmentsからpushする場合
+  cd ~/.ssh
+  ssh-keygen
+  空欄のままEnter3回押す
+  cat ~/.ssh/id_rsa.pub
+  上のコマンドで表示された鍵を　https://github.com/settings/ssh　に登録する
+  タイトルは空欄、keyに貼り付ける
+
 
 git remote add origin url
 git push -u origin master
